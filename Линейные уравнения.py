@@ -16,6 +16,6 @@ print(A_inv)
 
 X = A_inv.dot(Y)
 print(X)
-
+print('\n')
 C = 14 * A_inv
 print(C)
