@@ -1,0 +1,27 @@
+print('Обращение и изменение закрытого поля и использование Лямбды')
+
+class TPen():
+    def __init__(self):
+        self.__color = '000000'
+    def __getColor(self):
+        return self.__color
+    def __setColor(self, newColor):
+        if len(newColor) == 6:
+            self.__color = newColor
+        else:
+            self.__color = '000000'
+
+    #color = property(__getColor, __setColor)
+    color = property(lambda x: x.__color, __setColor)# использование Лямбды
+
+# =============================================================================
+# pen = TPen()    
+# print(pen.getColor())
+# pen.setColor('FF0000')
+# print(pen.getColor())
+# =============================================================================
+
+pen = TPen()    
+pen.color = 'FF0000'
+print('Новый цвет пера: ', pen.color)            
+
