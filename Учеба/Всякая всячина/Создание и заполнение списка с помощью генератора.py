@@ -1,0 +1,11 @@
+
+N = 5
+A = [0]*N
+for i in range(N):
+    A[i] = 10*i
+print(A)    
+
+
+
+B = [10*i for i in range(N)]
+print(B)

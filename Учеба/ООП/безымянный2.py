@@ -8,14 +8,8 @@ class TShip():
         self.image = image(self.x, TShipSHIP_Y,fileName)
     def move(self):
         moveObjectBy(self.image,self.v,0)
-fps = 20
-updatePeriod = round(1000/fps)
 
-Ship = TShip(5,0,3,‪'C:\ShipImage\Ship.png')
+Ship = TShip(5,0,‪C:\ShipImage\Ship.png)
+            
 
-def updare():
-    Ship.move
 
-onTimer(update,30)
-
-run()
